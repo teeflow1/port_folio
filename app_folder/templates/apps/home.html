@@ -695,6 +695,18 @@
               <div id="contact" class="box-shadow-full">
                 <div class="row">
                 <div class="col-md-6">
+
+                  {% if name %}
+
+                  <br/>
+                      <center>
+                          <h3> Thanks {{ name }}</h3>
+                          <p> We received your email and we will respond Shortly!!! </p>
+                      </center>
+                  <br/>
+
+                  {% else %}
+                  
                     <div class="title-box-2">
                       <h5 class="title-left">
                         Send Us Message
@@ -702,16 +714,6 @@
                     </div>
                     <div>
 
-                      {% if name %}
-
-                      <br/>
-                          <center>
-                              <h3> Thanks {{ name }}</h3>
-                              <p> We received your email and we will respond Shortly!!! </p>
-                          </center>
-                      <br/>
-
-                      {% else %}
 
                       <form  method="POST" >
 
