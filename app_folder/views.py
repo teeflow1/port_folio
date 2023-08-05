@@ -12,7 +12,7 @@ def home(request):
            'message from ' + name, #Subject
             message, # message
             email, # from email
-            subject, # subject
+            #subject, # subject
            ['temtopeayobami@gmail.com'], # to email
         )
         return render(request, 'apps/home.html', {'name':name})
