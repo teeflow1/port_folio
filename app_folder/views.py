@@ -7,16 +7,16 @@ def home(request):
         email = request.POST['email']
         subject = request.POST['subject']
         message = request.POST['message']
-        '''
+        
         send_mail(
            'message from ' + name, #Subject
             message, # message
-            subject, # subject
+            #subject, # subject
             email, # from email
            ['temitopeayobami995@gmail.com'], # to email
         )
-        '''
-        send_mail(name, message, subject, email, ['temtopeayobami@gmail.com'])
+        
+        #send_mail(name, message, subject, email, ['temtopeayobami@gmail.com'])
         return render(request, 'apps/home.html', {'name':name})
     
     else:
