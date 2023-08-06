@@ -16,7 +16,7 @@ def home(request):
            ['temitopeayobami995@gmail.com'], # to email
         )
         '''
-        send_mail(name, message, subject, email, ['temitopeayobami995@gmail.com'])
+        send_mail(name, message, subject, email, ['temtopeayobami@gmail.com'])
         return render(request, 'apps/home.html', {'name':name})
     
     else:
