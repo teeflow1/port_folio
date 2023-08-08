@@ -15,6 +15,9 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 import environ
 
@@ -27,7 +30,7 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-d5d&f72*^sjr=4nd$dhfx4-&jdlyz#@ib&o$+k$2cf0u_epv*j'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -151,9 +154,9 @@ DATABASES = {
 
 # Email Settings 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
 EMAIL_PORT = '587'
-EMAIL_HOST_USER= 'temtopeayobami@gmail.com'
-EMAIL_HOST_PASSWORD =  'ofneqgzbzqdjvdmq' #app password
+EMAIL_HOST_USER= os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD =  os.environ.get('EMAIL_HOST_PASSWORD') #app password
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = True
