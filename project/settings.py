@@ -162,3 +162,11 @@ EMAIL_HOST_USER= os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD =  os.environ.get('EMAIL_HOST_PASSWORD') #app password
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = True
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
