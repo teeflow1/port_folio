@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_folder',
+    'rest_framework_simplejwt', #Simple JWT Token
 ]
 
 MIDDLEWARE = [
